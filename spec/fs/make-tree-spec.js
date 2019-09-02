@@ -1,7 +1,7 @@
 "use strict";
 
 require("../lib/jasmine-promise");
-var Q = require("q");
+var Q = require("bluebird-q");
 var FS = require("../../fs");
 var _n = FS.normal;
 

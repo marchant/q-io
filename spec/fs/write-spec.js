@@ -6,6 +6,7 @@ describe("write", function () {
     it("should write in utf-8", function () {
         var path = FS.join(__dirname, "fixtures/so-it-is-written.txt");
         var content = "Hello, World!\n";
+
         return FS.write(path, content)
         .then(function (result) {
             expect(result).toBe(undefined);

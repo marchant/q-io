@@ -1,5 +1,5 @@
 
-var Q = require("q");
+var Q = require("bluebird-q");
 var Boot = require("./fs-boot");
 var Common = require("./fs-common");
 var BufferStream = require("./buffer-stream");
@@ -238,6 +238,7 @@ MockFs.prototype.link = function (source, target) {
 };
 
 MockFs.prototype.symbolicLink = function (target, relative, type) {
+
     var self = this;
     return Q.fcall(function () {
         target = self.absolute(target);
@@ -247,6 +248,7 @@ MockFs.prototype.symbolicLink = function (target, relative, type) {
         if (node._entries[base] && node._entries[base].isDirectory()) {
             throw new Error("Can't overwrite existing directory with symbolic link: " + target);
         }
+
         node._entries[base] = new LinkNode(self, relative);
     });
 };
@@ -528,7 +530,7 @@ LinkNode.prototype.isSymbolicLink = function () {
 };
 
 LinkNode.prototype._follow = function (via, memo) {
-    memo = memo || Set();
+    memo = memo || new Set();
     if (memo.has(this)) {
         var error = new Error("Can't follow symbolic link cycle at " + JSON.stringify(via));
         error.code = "ELOOP";

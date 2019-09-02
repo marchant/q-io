@@ -1,5 +1,5 @@
 
-var Q = require("q");
+var Q = require("bluebird-q");
 var MimeParse = require("mimeparse");
 var Status = require("./status");
 

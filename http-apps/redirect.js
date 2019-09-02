@@ -1,5 +1,5 @@
 
-var Q = require("q");
+var Q = require("bluebird-q");
 var URL = require("url2");
 var Http = require("../http");
 var Negotiation = require("./negotiate");

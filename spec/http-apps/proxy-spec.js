@@ -1,6 +1,6 @@
 
 require("../lib/jasmine-promise");
-var Q = require("q");
+var Q = require("bluebird-q");
 var Http = require("../../http");
 var Apps = require("../../http-apps");
 var FS = require("../../fs");

@@ -1,6 +1,6 @@
 "use strict";
 
-var Q = require("q");
+var Q = require("bluebird-q");
 
 /**
  * Modifies the way that individual specs are run to easily test async

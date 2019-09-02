@@ -1,5 +1,5 @@
 require("../lib/jasmine-promise");
-var Q = require("q");
+var Q = require("bluebird-q");
 var HTTPS = require("https");
 var http = require('../../http');
 

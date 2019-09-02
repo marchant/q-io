@@ -1,5 +1,5 @@
 
-var Q = require("q");
+var Q = require("bluebird-q");
 var URL = require("url2");
 var MimeTypes = require("mime");
 var FS = require("../fs");
@@ -83,7 +83,7 @@ exports.FileTree = function (root, options) {
 exports.file = function (request, path, contentType, fs) {
     fs = fs || FS;
     // TODO last-modified header
-    contentType = contentType || MimeTypes.lookup(path);
+    contentType = contentType || MimeTypes.getType(path);
     return Q.when(fs.stat(path), function (stat) {
         var etag = exports.etag(stat);
         var options = {

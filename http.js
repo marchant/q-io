@@ -8,7 +8,7 @@
 var HTTP = require("http"); // node
 var HTTPS = require("https"); // node
 var URL = require("url2"); // node
-var Q = require("q");
+var Q = require("bluebird-q");
 var Reader = require("./reader");
 
 /**

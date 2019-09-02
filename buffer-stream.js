@@ -1,5 +1,5 @@
 
-var Q = require("q");
+var Q = require("bluebird-q");
 var Reader = require("./reader");
 
 module.exports = BufferStream;

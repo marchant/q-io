@@ -1,5 +1,5 @@
 
-var Q = require("q");
+var Q = require("bluebird-q");
 var Cookie = require("../http-cookie");
 Q.longStackSupport = true;
 

@@ -40,7 +40,7 @@
  */
 
 require("collections/shim");
-var Q = require("q");
+var Q = require("bluebird-q");
 var HTTP = require("./http");
 var FS = require("./fs");
 var URL = require("url2");

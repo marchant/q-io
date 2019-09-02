@@ -1,5 +1,5 @@
 
-var Q = require("q");
+var Q = require("bluebird-q");
 
 /**
  * Wraps a Node writable stream, providing an API similar to

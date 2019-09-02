@@ -9,7 +9,7 @@
 /*whatsupdoc*/
 
 var FS = require("fs"); // node
-var Q = require("q");
+var Q = require("bluebird-q");
 var Reader = require("./reader");
 var Writer = require("./writer");
 var Common = require("./fs-common");

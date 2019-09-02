@@ -1,4 +1,4 @@
-var Q = require("q");
+var Q = require("bluebird-q");
 var Boot = require("./fs-boot");
 var RootFs = require("./fs-root");
 var MockFs = require("./fs-mock");
